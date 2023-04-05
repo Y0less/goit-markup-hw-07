@@ -34,6 +34,11 @@
             </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
+          <button type="button" class="mobile-button-open">
+            <svg class="icon" width="32" height="22">
+              <use href="./images/icons.svg#menu-hamburger"></use>
+            </svg>
+          </button>
         </nav>
         <address class="address">
           <ul class="contacts list">
@@ -48,22 +53,86 @@
           </ul>
         </address>
       </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-button-close">
+            <svg class="icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-wrap">
+            <ul class="mobile-nav list">
+              <li class="item">
+                <a href="./index.html" class="link current-page">Studio</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Portfolio</a>
+              </li>
+              <li class="item"><a href="" class="link">Contacts</a></li>
+            </ul>
+            <div class="mobile-menu-bottom-wrap">
+              <ul class="mobile-contacts list">
+                <li class="item">
+                  <a href="tel:+110001111111" class="link tel"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="mailto:info@devstudio.com" class="link email"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="social-buttons-mobile-list list">
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Main comtent -->
     <main>
-      <!-- (Hero) Section 1 -->
-      <section class="hero-section">
+      <!-- (Hero) Section -->
+      <!-- <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button" data-modal-open>
             Order Service
           </button>
         </div>
-      </section>
+      </section> -->
       <!-- Section 1 -->
-      <section class="section nopadding-btm">
+      <!-- <section class="section nopadding-btm">
         <div class="container">
-          <!-- hidden section title -->
           <h2 class="visually-hidden">Our advantages</h2>
           <ul class="advantages list">
             <li class="item">
@@ -116,9 +185,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Section 2 -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="list services-list">
@@ -141,12 +210,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Section 3 -->
-      <section class="section team-section">
+      <!-- <section class="section team-section">
         <div class="container">
           <h2 class="title">Our Team</h2>
-          <!-- Team Members List -->
           <ul class="card-set list">
             <li class="card">
               <img
@@ -314,9 +382,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Section 4 -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="title">Customers</h2>
           <ul class="customers-list list">
@@ -364,10 +432,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Footer -->
-    <footer class="footer-section">
+    <!-- <footer class="footer-section">
       <div class="container">
         <div class="slogan-part">
           <a class="logo-main link" href="./index.html"
@@ -431,9 +499,9 @@
           </div>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <!-- Modal Window -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-button-close" data-modal-close>
           <svg class="icon" width="8" height="8">
@@ -474,7 +542,6 @@
               placeholder="Text input"
             ></textarea>
           </div>
-          <!-- Modal Policy  Checker-->
           <div class="modal-form-policy-checker-wrap">
             <input
               class="modal-checkbox"
@@ -494,7 +561,8 @@
           <button class="button" type="submit">Send</button>
         </form>
       </div>
-    </div>
-    <script src="./js/modal.js"></script>
+    </div> -->
+    <!-- <script src="./js/modal.js"></script> -->
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

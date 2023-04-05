@@ -95,17 +95,23 @@ body {
   margin: -1px;
 }
 
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* max-width: 396px;
+  margin-left: auto;
+  margin-right: auto; */
+  outline: solid 1px teal;
+}
+
 /* Header Section ------------------------------------------------------*/
 .header {
-  border-bottom: 2px solid var(--accent-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  outline: solid 1px orange;
 }
 
-.header-flex {
-  display: flex;
-  align-items: center;
-}
-
-/* Logo Style */
+/* Logo */
 .logo-main {
   font-family: "Raleway";
   font-weight: 800;
@@ -120,13 +126,218 @@ body {
   color: var(--dark-color);
 }
 
-/* Navigation flex */
+.mobile-button-open {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* Mobile hiding elements */
+@media screen and (max-width: 767px) {
+
+  .site-nav,
+  .address {
+    display: none;
+  }
+}
+
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+
+  transform: translateX(100%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-container {
+  position: relative;
+  height: 100%;
+
+  padding: 80px 35px 40px 40px;
+}
+
+.mobile-button-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    fill var(--transition-duration) var(--transition-timing-function);
+}
+
+.mobile-button-close>.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-button-close:is(:hover, :focus) {
+  background-color: var(--pressed-state-color);
+  fill: var(--white-color);
+}
+
+/* Mobile Menu Navigation */
+.mobile-nav .link {
+  display: block;
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--dark-color);
+
+}
+
+.list .current-page {
+  color: var(--pressed-state-color);
+}
+
+.mobile-menu-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-nav {
+  flex-grow: 1;
+}
+
+
+.mobile-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-contacts .tel {
+  display: block;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--primary-brand-color);
+}
+
+.mobile-contacts .email {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.11;
+  color: var(--text-color);
+}
+
+/* Mobile Menu Social Buttons */
+.social-buttons-mobile-list.list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 328px;
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.social-buttons-mobile-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-buttons-mobile {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.social-buttons-mobile:is(:hover, :focus) {
+  background-color: var(--sucsess-color);
+}
+
+
+
+/* Mobile adaptive container ===================================================*/
+@media screen and (min-width: 480px) {
+  .container {
+    width: calc(396px + 2*15px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+}
+
+
+
+/* Tablet adaptive container ===================================================*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: calc(736px + 2*15px);
+  }
+
+  .mobile-menu,
+  .mobile-button-open {
+    display: none;
+  }
+}
+
+
+/* Laptop adaptive container ===================================================*/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: calc(1128px + 2*15px);
+  }
+}
+
+/* .header {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
 .nav-flex {
   display: flex;
   align-items: center;
 }
 
-/* Navigation buttons flex */
+
 .site-nav {
   display: flex;
   margin-left: 76px;
@@ -140,7 +351,7 @@ body {
   margin-left: auto;
 }
 
-/* Links styles */
+
 .contacts {
   display: flex;
 }
@@ -156,7 +367,6 @@ body {
 
   color: var(--dark-color);
   font-weight: 500;
-  /* outline: solid 1px brown; */
 
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
@@ -173,10 +383,7 @@ body {
   color: var(--pressed-state-color);
 }
 
-/* Current Page Style */
-.list .current-page {
-  color: var(--pressed-state-color);
-}
+
 
 .current-page {
   position: relative;
@@ -194,30 +401,13 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--pressed-state-color);
-}
+} */
 
 /* Main Section --------------------------------------------------------*/
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
   /* outline: 1px solid teal; */
-}
-
-.section.nopadding-btm {
-  padding-bottom: 0;
-}
-
-.section.portfolio-paddings {
-  padding-top: 96px;
-}
-
-.container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  /* outline: 1px solid tomato; */
 }
 
 /* Hero Section --------------------------------------------------------*/
@@ -666,15 +856,6 @@ body {
   text-align: center;
 }
 
-/* Modal Form-------------------------------- */
-/* .modal-form {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-
-  outline: 1px solid teal;
-} */
-
 .modal-form-field {
   position: relative;
   margin-bottom: 8px;
@@ -823,6 +1004,10 @@ body {
 
 /* Portfolio ===============================================================*/
 /* Portfolio filter buttons */
+.section.portfolio-paddings {
+  padding-top: 96px;
+}
+
 .portfolio-buttons {
   display: flex;
   justify-content: center;
