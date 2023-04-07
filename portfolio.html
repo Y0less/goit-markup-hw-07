@@ -26,12 +26,19 @@
             >Web<span class="logo-secondary">Studio</span></a
           >
           <ul class="site-nav list">
-            <li class="item"><a href="./index.html" class="link">Studio</a></li>
+            <li class="item">
+              <a href="./index.html" class="link">Studio</a>
+            </li>
             <li class="item">
               <a href="./portfolio.html" class="current-page link">Portfolio</a>
             </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
+          <button type="button" class="mobile-button-open">
+            <svg class="icon" width="32" height="22">
+              <use href="./images/icons.svg#menu-hamburger"></use>
+            </svg>
+          </button>
         </nav>
         <address class="address">
           <ul class="contacts list">
@@ -45,6 +52,73 @@
             </li>
           </ul>
         </address>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-button-close">
+            <svg class="icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-wrap">
+            <ul class="mobile-nav list">
+              <li class="item">
+                <a href="./index.html" class="link">Studio</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link current-page"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="item"><a href="" class="link">Contacts</a></li>
+            </ul>
+            <div class="mobile-menu-bottom-wrap">
+              <ul class="mobile-contacts list">
+                <li class="item">
+                  <a href="tel:+110001111111" class="link tel"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="mailto:info@devstudio.com" class="link email"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="social-buttons-mobile-list list">
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-buttons-mobile-item">
+                  <a class="social-buttons-mobile link" href=""
+                    ><svg class="icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -68,7 +142,6 @@
               <button type="button" class="button">Marketing</button>
             </li>
           </ul>
-          <!-- Portfolio Grid -->
           <ul class="portfolio-list list">
             <li class="item">
               <a class="portfolio-link link" href="">
@@ -258,7 +331,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="footer-section">
+    <!-- <footer class="footer-section">
       <div class="container">
         <div class="slogan-part">
           <a class="logo-main link" href="./index.html"
@@ -324,6 +397,7 @@
           </div>
         </form>
       </div>
-    </footer>
+    </footer> -->
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
