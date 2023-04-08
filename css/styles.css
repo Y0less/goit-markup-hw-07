@@ -130,6 +130,8 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 22px;
+
+  border-bottom: 2px solid var(--accent-color);
   /* outline: solid 1px orange; */
 }
 
@@ -910,7 +912,8 @@ body {
 
 /* Mobile Portfolio ===============================================================*/
 .section.portfolio-paddings {
-  padding-top: 96px;
+  padding-top: 48px;
+  padding-bottom: 0px;
 }
 
 .portfolio-buttons {
@@ -921,10 +924,6 @@ body {
   row-gap: 16px;
   margin-bottom: 48px;
 }
-
-/* .portfolio-buttons .item+.item {
-  margin-left: 24px;
-} */
 
 .portfolio-buttons .button {
   padding: 12px 24px;
@@ -957,24 +956,29 @@ body {
 }
 
 /* portfolio grid */
-.portfolio-list {
+/* .portfolio-list {
 
   display: flex;
   flex-wrap: wrap;
 
   margin-top: calc(-1 * var(--portfolio-row-gap));
   margin-left: calc(-1 * var(--card-gap));
-}
+} */
 
 .portfolio-list>.item {
-  flex-basis: calc(100% / 3 - var(--card-gap));
-  margin-top: var(--portfolio-row-gap);
-  margin-left: var(--card-gap);
+  /* width: 100%; */
+  /* flex-basis: flex-basis: calc((100% - 16px) / 2);; */
+  /* margin-top: var(--portfolio-row-gap);
+  margin-left: var(--card-gap); */
   /* outline: 1px solid red; */
 }
 
 .portfolio-link.link {
   display: block;
+
+  max-width: 396px;
+  margin-bottom: 48px;
+
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
@@ -1018,6 +1022,13 @@ body {
   border-width: 0 1px 1px 1px;
 }
 
+.item-caption>.sub-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+}
+
 .item-caption>p {
   color: var(--text-color);
 }
@@ -1036,7 +1047,6 @@ body {
 
   /* Tablet Header -------------------------------------------------------------*/
   .header {
-    border-bottom: 2px solid var(--accent-color);
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1255,7 +1265,27 @@ body {
 
   .portfolio-buttons {
     justify-content: center;
-    margin-bottom: 67px;
+    margin-bottom: 64px;
+  }
+
+  .section.portfolio-paddings {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .portfolio-link.link {
+    margin-bottom: 0;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .portfolio-list .item {
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
@@ -1390,4 +1420,16 @@ body {
     margin-bottom: 72px;
   }
 
+  .section.portfolio-paddings {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-list {
+    row-gap: 48px;
+  }
+
+  .portfolio-list .item {
+    flex-basis: calc((100% - (2 * 24px)) / 3);
+  }
 }
