@@ -955,24 +955,6 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* portfolio grid */
-/* .portfolio-list {
-
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-top: calc(-1 * var(--portfolio-row-gap));
-  margin-left: calc(-1 * var(--card-gap));
-} */
-
-.portfolio-list>.item {
-  /* width: 100%; */
-  /* flex-basis: flex-basis: calc((100% - 16px) / 2);; */
-  /* margin-top: var(--portfolio-row-gap);
-  margin-left: var(--card-gap); */
-  /* outline: 1px solid red; */
-}
-
 .portfolio-link.link {
   display: block;
 
