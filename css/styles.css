@@ -913,7 +913,15 @@ body {
 /* Mobile Portfolio ===============================================================*/
 .section.portfolio-paddings {
   padding-top: 48px;
-  padding-bottom: 0px;
+  /* padding-bottom: 48px; */
+}
+
+.portfolio-list .item {
+  margin-bottom: 48px;
+}
+
+.portfolio-list .item:last-child {
+  margin-bottom: 0;
 }
 
 .portfolio-buttons {
@@ -957,9 +965,6 @@ body {
 
 .portfolio-link.link {
   display: block;
-
-  max-width: 396px;
-  margin-bottom: 48px;
 
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
